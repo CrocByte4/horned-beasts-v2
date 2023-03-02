@@ -1,8 +1,7 @@
 import React from "react";
 import HornedBeast from "./HornedBeast";
-import data from "../data.json";
 
-export default function Main() {
+export default function Main({ data }) {
   return (
     <main>
       {data.map((beast) => {

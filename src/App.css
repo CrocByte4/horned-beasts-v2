@@ -14,14 +14,3 @@ img {
 .horned-beast {
   width: 25%;
 }
-
-.modal {
-  width: 100vw;
-  height: 100vw;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
