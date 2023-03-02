@@ -1,7 +1,7 @@
 import React from "react";
 import HornedBeast from "./HornedBeast";
 
-export default function Main({ data }) {
+export default function Main({ data, handleModal }) {
   return (
     <main>
       {data.map((beast) => {
@@ -10,6 +10,8 @@ export default function Main({ data }) {
             title={beast.title}
             imageUrl={beast.image_url}
             description={beast.description}
+            handleModal={handleModal}
+            beast={beast}
           />
         );
       })}
