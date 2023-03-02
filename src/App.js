@@ -20,7 +20,9 @@ function App() {
     <div className="App">
       <Header />
       <Main data={data} handleModal={handleModal} />
-      {modalShow && <SelectedBeast theBeast={theBeast} />}
+      {modalShow && (
+        <SelectedBeast theBeast={theBeast} handleModal={handleModal} />
+      )}
       <Footer />
     </div>
   );
