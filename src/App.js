@@ -7,32 +7,23 @@ import { useState } from "react";
 import SelectedBeast from "./Components/SelectedBeast";
 
 function App() {
-  const [formData, setFormData] = useState ({
-    userName: "",
-    colour: "",
-    drink: "",
-  });
+  const [modalShow, setModalShow] = useState(false);
+  const [theBeast, setTheBeast] = useState({});
+  const [hornsFilter, setHornsFilter] = useState("");
 
-  function handleSubmit(event) {
-    event.preventDefault();
-  }
-
-  function handleChange(event) {
-    let newFormData = ( ...formData, [event.target.name]: event.target.value) ;
-    setFormData(newFormData);
+  function handleModal(beast) {
+    setModalShow(!modalShow);
+    setTheBeast(beast);
   }
 
   return (
     <div className="App">
       <h1>Form Demo</h1>
       <form onSubmit={handleSubmit}>
-        <input name="userName" colour="colour" drink="drink" />
+        <input colour="colour" />
       </form>
     </div>
-  )
-
-  const [modalShow, setModalShow] = useState(false);
-  const [theBeast, setTheBeast] = useState({});
+  );
 
   function handleModal(beast) {
     setModalShow(!modalShow);
